@@ -1,8 +1,8 @@
-const signupForm = document.querySelector('.signupForm');
+const loginForm = document.querySelector('.loginForm');
 const idInput = document.querySelector('.idBox input');
 const pwInput = document.querySelector('.pwBox input');
 
-const url = 'http://localhost:5050/user/api/signup';
+const url = 'http://localhost:5050/user/api/login';
 
 const handleSubmit = async (e) => {
   e.preventDefault();
@@ -46,7 +46,7 @@ function init() {
   if (user) {
     location.href = '../Main/index.html';
   } else {
-    signupForm.addEventListener('submit', handleSubmit);
+    loginForm.addEventListener('submit', handleSubmit);
   }
 }
 

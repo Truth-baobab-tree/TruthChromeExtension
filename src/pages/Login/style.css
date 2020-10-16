@@ -1,0 +1,94 @@
+body {
+  width: 400px!important;
+  height: 300px!important;
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  height: 60px;
+  margin: 0 0 20px;
+}
+
+.header h1 {
+  font-size: 28px;
+  color: #fff;
+  line-height: 60px;
+  border-bottom: 2px solid #bdc3c7;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.loginForm {
+  background: #ecf0f1;
+  border-radius: 4px;
+  width: 340px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.loginForm .inputBoxContainer {
+  width: 100%;
+  height: 140px;
+  padding: 15px;
+}
+
+.loginForm .inputBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+.loginForm .inputBox label {
+  margin: 0 15px 0 0;
+}
+
+.loginForm .inputBox label img {
+  width: 28px;
+  height: 28px;
+}
+
+.loginForm .inputBox input {
+  border: none;
+  width: 250px;
+  height: 40px;
+  font-size: 20px;
+  background: none;
+  transition: .1s;
+  letter-spacing: 2px;
+  color: #2c3e50;
+}
+
+.loginForm .inputBox input:focus {
+  border-right: 4px solid #e74c3c;
+}
+
+.loginForm .inputBox input:focus, .loginForm .buttonBox button:focus {
+  outline: none;
+}
+
+.loginForm .inputBox input, .loginForm .buttonBox button {
+  border: none;
+}
+
+.loginForm .buttonBox {
+  width: 100%;
+}
+
+.loginForm .buttonBox button {
+  width: 200px;
+  height: 50px;
+  background: #e74c3c;
+  color: #fff;
+  font-size: 21px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+.loginForm .buttonBox button:hover {
+  background: rgba(231, 76, 60, 0.8);
+}

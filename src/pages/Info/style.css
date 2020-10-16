@@ -1,0 +1,39 @@
+body {
+	width: 400px;
+	height: 600px;
+	text-align: left;
+}
+
+.back {
+  padding: 0 10px;
+}
+
+.back a {
+  font-size: 40px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.knight_title_div{
+	color:white;
+	margin: 0px 0px 0px 10px;
+}
+
+.knight_title_div h2 {
+	font-size: 20px;
+}
+
+.knight_content_div{
+	color:rgb(208,206,206);
+	margin: 0px 0px 0px 10px;
+}
+
+.hr_div{
+	padding: 10px 10px;
+}
+
+.hr_div hr {
+	border: none;
+	height: 1px;
+	background: rgb(118, 113, 113);
+}
