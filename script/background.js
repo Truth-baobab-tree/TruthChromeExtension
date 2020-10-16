@@ -1,3 +1,3 @@
 chrome.browserAction.onClicked.addListener(() => {
-  chrome.tabs.create({ url: '../src/index.html' });
+  chrome.tabs.create({ url: '../src/pages/Main/index.html' });
 });
