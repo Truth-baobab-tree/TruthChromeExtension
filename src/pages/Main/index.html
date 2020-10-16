@@ -4,24 +4,69 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Main</title>
-  <style>
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-    }
-
-    body {
-      width: 400px;
-      height: 300px;
-      overflow-x: hidden;
-    }
-  </style>
+  <link rel="stylesheet" href="./style.css" type="text/css" />
+  <link rel="stylesheet" href="../../theme/global.css" type="text/css" />
+  <script src='./script.js' async></script>
 </head>
 <body>
-  <h1>TRUTH APP</h1>
-  <a href='../Eval/index.html'>평가</a>
+      <div class="mainBox bg show">
+        <div class="top_line_box" >
+          <input type="text" class="url_box" value="https://www.naver.com" readonly/>
+          <div class="userCircle">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+        
+      
+        <div class="statusbox">
+          <div class="percent_all">
+            <h1 class="percent">20%</h1>
+            <p class="percent_text">신뢰할 수 없는<br/>컨텐츠입니다.</p>
+          </div>
+          <div class="imgBox">
+            <div>
+              <img src="../../../public/images/true.png" class="img" />
+              <p class="percent_num">
+                20
+              </p>
+            </div>
+            <div>
+              <img src="../../../public/images/false.png" class="img" />
+              <p class="percent_num">
+                80
+              </p>
+            </div>
+          </div>
+          
+        </div>
+        <div class="Evaluation">
+          <button class="read_evaluation">
+            평가보기
+          </button>
+          <button class="write_evaluation">
+            평가쓰기
+          </button>
+        </div>
+        <div class="info">
+          <h3>
+            관련정보
+          </h3>
+        </div>
+        <div class="info_title">
+          <p>
+            문대통령 "국산 코로나19 치료제 연내 본격 생산"
+          </p>
+        </div>
+        <div class="info_content">
+          <p>
+            기사내용기사내용기사내용기사내용기사내용기사내용기사내용기사내용기사내용기사내용기사내용기사내
+          </p>
+        </div>
+        <div >
+          <button class="info_plus">
+            더보기
+          </button>
+        </div>
+      </div>
 </body>
 </html>

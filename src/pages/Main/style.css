@@ -1,0 +1,173 @@
+body {
+  width: 400px;
+  height: 450px;
+  overflow-x: hidden;
+}
+
+/*
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}*/
+
+.mainBox {
+	width: 400px;
+	height: 450px;
+}
+
+.url_box {
+	text-align:center;
+	width:270px;	
+	height:30px;
+}
+
+.url_box:focus {
+	outline: none;
+}
+
+.statusbox {
+	display: flex;
+	width: 100%;
+	padding: 0px 0px 0px 0px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.percent_all{
+	width: 200px;
+}
+
+.percent{
+	color:red;
+	font-size:70px;
+	margin: 0px 0px 0px 0px;
+	text-align: center;
+	
+}
+
+.percent_text{
+	color:red;
+	font-size:20px;
+	margin: 20px 0px 0px 0px;
+	text-align: center;
+}
+
+.imgBox {
+	display: flex;
+}
+
+.imgBox p {
+	text-align: center;
+	color: #fff;
+}
+
+.img{
+	width:70px;
+	height:70px;
+	margin: 0px 25px 0px 0px;
+}
+
+.percent_num{
+	margin: 5px 25px 0px 0px;
+}
+
+.top_line_box {
+	display: flex;
+	align-items: center;
+	width: 100;
+	justify-content: space-between;
+	padding: 15px 15px 0px 20px;
+}
+
+.userCircle {
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	background: #fff;
+	text-align: center;
+	margin: 0px 0px 0px 0px;
+}
+
+.userCircle i {
+	font-size: 30px;
+	line-height: 50px;
+	cursor: pointer;
+}
+
+
+.Evaluation{
+	width:100%;
+	display: flex;
+	padding: 0px 0px 0px 0px;
+	align-items: center;
+	justify-content: center;
+}
+
+.Evaluation button {
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.Evaluation button:focus {
+	outline: none;
+}
+
+.Evaluation button:hover {
+	background: rgba(255, 255, 255, 0.8);
+}
+
+.read_evaluation{
+	width: 170px;
+	height: 27px;
+	margin: 20px 0px 0px 0px;
+}
+
+.write_evaluation{
+	width: 170px;
+	height: 35px;
+	margin: 10px 0px 0px 20px;
+}
+
+.info{
+	text-align: center;
+	color:white;
+	margin: 5px 0px 0px 0px;
+	padding: 0 20px;
+}
+
+.info h3 {
+	font-size: 20px;
+	font-weight: 400;
+	height: 35px;
+	border-bottom: 2px solid rgb(118,113,113);
+}
+
+.infoBox {
+	width: 400px;
+	height: 600px;
+}
+
+.info_title{
+	color:white;
+	font-size: 17px;
+	margin: 5px 0px 0px 10px;
+	height;
+}
+
+.info_content{
+	color:rgb(208,206,206);
+	margin: 0px 0px 0px 10px;
+	height: 20px;
+}
+
+.info_plus{
+	width: 300px;
+	margin: 50px 0px 0px 50px;
+}

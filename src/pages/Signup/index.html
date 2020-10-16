@@ -4,10 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Signup</title>
-  <link href='../../theme/global.css' ref='stylesheet' type="text/css" />
-  <link href='./style.css' ref='stylesheet' type="text/css" />
+  <link rel="stylesheet" href="./style.css" type="text/css" />
+  <link rel="stylesheet" href="../../theme/global.css" type="text/css" />
+  <script src='./script.js' async></script>
 </head>
 <body>
-  
+  <div class="header">
+    <h1>TRUTH</h1>
+  </div>
+  <form class="signupForm" autocomplete="off">
+    <div class="inputBoxContainer">
+      <div class="inputBox idBox">
+        <label><img src='../../../public/images/user.svg' /></label>
+        <input type="text" name="name" value="" placeholder="ID" />        
+      </div>
+      <div class="inputBox pwBox">
+        <label><img src='../../../public/images/password.svg' /></label>
+        <input type="password" name="password" value="" placeholder="password" />
+      </div>
+    </div>
+    <div class="buttonBox">
+      <button type="submit">Sign Up</button>
+    </div>
+  </form>
+
+  <!--
+    아이콘 제작자: <a href="https://www.flaticon.com/kr/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/kr/" title="Flaticon"> www.flaticon.com</a>
+    아이콘 제작자 <a href="https://www.flaticon.com/kr/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/kr/" title="Flaticon"> www.flaticon.com</a>
+  -->
 </body>
 </html>
