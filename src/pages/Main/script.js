@@ -1,5 +1,6 @@
-const infoTitle = document.querySelector('.info_title');
-const infoContent = document.querySelector('.info_content');
+const infoLink = document.querySelector('.infoContainer .title a');
+const infoTitle = infoLink.querySelector('h2');
+const infoContent = document.querySelector('.infoContainer .description p');
 const urlBox = document.querySelector('.url_box');
 
 const url = 'http://localhost:5050/info/get/news/sample';
@@ -8,8 +9,9 @@ const loadInfoData = async (title) => {
   const res = await fetch(`${url}/${title}/1`);
   const result = await res.json();
 
-  infoTitle.innerHTML = result[0].title;
-  infoContent.innerHTML = result[0].description;
+  infoLink.href = result[0].originallink;
+  infoTitle.innerHTML = result[0].title.substring(0, 20) + '...';
+  infoContent.innerHTML = result[0].description.substring(0, 100) + '...';
 };
 
 function init() {

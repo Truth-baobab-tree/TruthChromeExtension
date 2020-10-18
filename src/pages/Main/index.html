@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,6 +11,7 @@
 </head>
 
 <body>
+
   <div class="top_line_box">
     <input type="text" class="url_box" value="loading..." readonly />
     <a href='../Profile/index.html'>
@@ -19,42 +21,43 @@
     </a>
   </div>
 
-
-  <div class="statusbox">
-    <div class="percent_all">
-      <h1 class="percent">20%</h1>
-      <p class="percent_text">신뢰할 수 없는<br />컨텐츠입니다.</p>
+  <div class="statusContainer">
+    <div class="box">
+      <img src="../../../public/images/true.png" />
+      <p class="score">20</p>
     </div>
-    <div class="imgBox">
-      <div>
-        <img src="../../../public/images/true.png" class="img" />
-        <p class="percent_num">20</p>
-      </div>
-      <div>
-        <img src="../../../public/images/false.png" class="img" />
-        <p class="percent_num">80</p>
-      </div>
+    <div class="box">
+      <img src="../../../public/images/false.png" />
+      <p class="score">80</p>
     </div>
+  </div>
 
-  </div>
-  <div class="Evaluation">
-    <button class="read_evaluation">평가보기</button>
-    <button class="write_evaluation">평가쓰기</button>
-  </div>
-  <div class="info">
-    <h3>관련정보</h3>
-  </div>
-  <div class="info_title">
-    <p>loading...</p>
-  </div>
-  <div class="info_content">
-    <p>loading...</p>
-  </div>
-  <div class="infoBox">
-    <a href='../Info/index.html'>
-      <button class="info_plus">더보기</button>
+  <div class="EvalButtonBox">
+    <a href='../Check/index.html'>
+      <button class="button">평가보기</button>
+    </a>
+    <a href='../Eval/index.html'>
+      <button class="button">평가하기</button>
     </a>
   </div>
+
+  <div class="infoContainer">
+    <h1>관련 정보</h1>
+    <div class="infoBox">
+      <div class="title">
+        <a href='#' target="_blank">
+          <h2>loading...</h2>
+        </a>
+      </div>
+      <div class="description">
+        <p>loading...</p>
+      </div>
+    </div>
+    <div class="seeMore">
+      <a href='../Info/index.html'>더보기</a>
+    </div>
+  </div>
+
 </body>
 
 </html>

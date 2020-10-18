@@ -3,63 +3,6 @@ body {
 	height: 450px;
 }
 
-.url_box {
-	text-align:center;
-	width:300px;	
-  height:30px;
-  padding-left: 10px;
-}
-
-.url_box:focus {
-	outline: none;
-}
-
-.statusbox {
-	display: flex;
-	width: 100%;
-	padding: 0px 0px 0px 0px;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.percent_all{
-	width: 200px;
-}
-
-.percent{
-	color:red;
-	font-size:70px;
-	margin: 0px 0px 0px 0px;
-	text-align: center;
-	
-}
-
-.percent_text{
-	color:red;
-	font-size:20px;
-	margin: 20px 0px 0px 0px;
-	text-align: center;
-}
-
-.imgBox {
-	display: flex;
-}
-
-.imgBox p {
-	text-align: center;
-	color: #fff;
-}
-
-.img{
-	width:70px;
-	height:70px;
-	margin: 0px 25px 0px 0px;
-}
-
-.percent_num{
-	margin: 5px 25px 0px 0px;
-}
-
 .top_line_box {
 	display: flex;
 	align-items: center;
@@ -69,8 +12,8 @@ body {
 }
 
 .userCircle {
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	border-radius: 100%;
 	background: #fff;
 	text-align: center;
@@ -80,79 +23,133 @@ body {
 }
 
 .profile_img {
-	width:30px;
-	height:30px;
-
+	width: 20px;
+	height: 20px;
 }
 
+.url_box {
+	text-align:center;
+	width: 300px;
+  height:30px;
+  padding-left: 10px;
+  border: none;
+  background: #7f8c8d;
+  border-radius: 5px;
+  color: #fff;
+}
 
-.Evaluation{
-	width:100%;
+.url_box:focus {
+	outline: none;
+}
+
+.statusContainer {
 	display: flex;
-	padding: 0px 0px 0px 0px;
+	width: 100%;
+	margin: 30px auto 20px;
 	align-items: center;
 	justify-content: center;
 }
 
-.Evaluation button {
+.statusContainer .box {
+  margin: 0 20px;
+  width: 70px;
+  text-align: center;
+}
+
+.statusContainer .box img {
+	width: 60px;
+  height: 60px;
+}
+
+.statusContainer .box .score {
+	text-align: center;
+	color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 5px 0 0;
+}
+
+.EvalButtonBox {
+	width:100%;
+	display: flex;
+	align-items: center;
+  justify-content: center;
+  margin: 25px auto 0;
+}
+
+.EvalButtonBox a .button {
 	border-radius: 5px;
 	border: none;
 	cursor: pointer;
 	font-size: 15px;
-	font-weight: 600;
+  font-weight: 600;
+  width: 160px;
+  height: 35px;
+  background: #fff;
+  transition: .3s;
+  margin: 0 16px;
 }
 
-.Evaluation button:focus {
-	outline: none;
+.button:focus {
+  outline: none;
 }
 
-.Evaluation button:hover {
+.EvalButtonBox a .button:hover {
 	background: rgba(255, 255, 255, 0.8);
 }
 
-.read_evaluation{
-	width: 170px;
-	height: 27px;
-	margin: 20px 0px 0px 0px;
+.EvalButtonBox a {
+  text-decoration: none;
+  color: #000;
 }
 
-.write_evaluation{
-	width: 170px;
-	height: 35px;
-	margin: 10px 0px 0px 20px;
+.infoContainer {
+  width: 100%;
+  margin: 20px 0 0;
+  padding: 10px;
 }
 
-.info{
-	text-align: center;
-	color:white;
-	margin: 5px 0px 0px 0px;
-	padding: 0 20px;
+.infoContainer h1 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  height: 36px;
+  border-bottom: 2px solid rgb(118,113,113);
 }
 
-.info h3 {
-	font-size: 20px;
-	font-weight: 400;
-	height: 35px;
-	border-bottom: 2px solid rgb(118,113,113);
+.infoContainer .infoBox {
+  width: 370px;
+  height: 90px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.75);
+  margin: 8px auto 0;
+  padding: 5px;
 }
 
-.infoBox {
-  text-align: center;
+.infoContainer .title a h2 {
+  font-size: 15px;
+  color: #000;
+  font-weight: 600;
+  max-height: 45px;
 }
 
-.info_title{
-	color:white;
-	font-size: 17px;
-	margin: 5px 0px 0px 10px;
+.infoContainer .title a h2:hover, .infoContainer .seeMore a:hover {
+  text-decoration: underline;
 }
 
-.info_content{
-	color:rgb(208,206,206);
-	margin: 0px 0px 0px 10px;
-	height: 50px;
+.infoContainer .description p {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.7);
 }
 
-.info_plus{
-  width: 300px;
-  margin: 0 auto;
+.infoContainer .seeMore {
+  margin: 10px 0 0;
+  width: 100%;
+  text-align: right;
 }
+
+.infoContainer .seeMore a {
+  color: #fff;
+  font-size: 16px;
+}
+

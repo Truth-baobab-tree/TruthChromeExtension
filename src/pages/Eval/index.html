@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Evaluation</title>
+  <title>Eval</title>
   <link rel="stylesheet" href="./style.css" type="text/css" />
   <link rel="stylesheet" href="../../theme/global.css" type="text/css" />
   <script src='./script.js' async></script>
 </head>
+
 <body>
-  
+  <div class="back">
+    <a href='../Main/index.html'>←</a>
+  </div>
+  <div class="warning">
+    <h1 class="text">주의: 한 번 제출하면 수정할 수 없습니다.</h1>
+  </div>
+  <div class="buttonContainer">
+    <button class="button">
+      <img src="../../../public/images/true.png" />
+    </button>
+    <h1 class="text true">진실</h1>
+    <button class="button">
+      <img src="../../../public/images/false.png" />
+    </button>
+    <h1 class="text false">거짓</h1>
+  </div>
+  <div class="textareaBox">
+    <textarea type="text" class="textbox" placeholder="평가에 대한 근거를 작성해보세요."></textarea>
+  </div>
+  <div class="button_loc">
+    <button type="submit" class="button">제출</button>
+  </div>
 </body>
+
 </html>
