@@ -92,3 +92,8 @@ body {
 .signupForm .buttonBox button:hover {
   background: rgba(231, 76, 60, 0.8);
 }
+
+.goToLogin {
+  color: #fff;
+  font-weight: bold;
+}

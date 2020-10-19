@@ -1,5 +1,6 @@
 const name = document.querySelector('.name');
 const rank = document.querySelector('.rank');
+const logout = document.querySelector('.logout');
 
 const url = 'http://localhost:5050/user/api/find';
 
@@ -18,11 +19,17 @@ const setUserData = async (key) => {
   rank.innerHTML = data.rank;
 }
 
+function onLogout() {
+  localStorage.clear();
+  location.href = '../Main/index.html';
+}
+
 function init() {
   const user = localStorage.getItem('user');
   if (!user) {
     location.href = '../Login/index.html';
   } else {
+    logout.addEventListener('click', onLogout);
     setUserData(user);
   }
 }
