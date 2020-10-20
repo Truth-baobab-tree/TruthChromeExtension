@@ -4,6 +4,14 @@ const logout = document.querySelector('.logout');
 
 const url = 'http://localhost:5050/user/api/find';
 
+const rankSystem = {
+  bronze: '170, 125, 98',
+  silver: '186, 181, 178',
+  gold: '164, 147, 104',
+  platinum: '203, 235, 227',
+  diamond: '197, 223, 241',
+};
+
 const setUserData = async (key) => {
   const res = await fetch(url, {
     method: 'POST',
@@ -15,8 +23,9 @@ const setUserData = async (key) => {
 
   const data = await res.json();
 
-  name.innerHTML = data.name;
-  rank.innerHTML = data.rank;
+  name.textContent = data.name;
+  rank.textContent = data.rank;
+  rank.style.background = `rgb(${rankSystem[data.rank]})`;
 }
 
 function onLogout() {

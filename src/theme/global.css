@@ -18,3 +18,13 @@ a {
 button:focus {
   outline: none;
 }
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  } to {
+    transform: none;
+    opacity: 1;
+  }
+}

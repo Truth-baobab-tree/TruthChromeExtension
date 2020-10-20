@@ -1,8 +1,7 @@
 body {
-  width: 400px;
-  height: 600px;
+  width: 400px!important;
+  height: 450px!important;
   text-align: left;
-  padding-top: 85px;
 }
 
 .back {
@@ -11,8 +10,10 @@ body {
   background: rgba(0, 0, 0, 0.65);
   top: 0;
   left: 0;
-  padding: 0 10px;
+  padding: 0 20px;
   height: 60px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .back a {
@@ -22,14 +23,30 @@ body {
   line-height: 50px;
 }
 
+.back h1 {
+  color: #fff;
+  line-height: 60px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
 .infoContainer {
-  padding: 0 10px;
+  padding: 85px 10px 0;
+  overflow-y: scroll;
+  max-height: 450px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.infoContainer::-webkit-scrollbar {
+  display: none;
 }
 
 .infoBox {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
   padding: 10px;
+  animation: fadeIn .6s;
 }
 
 .knight_title_div a {

@@ -13,8 +13,8 @@ const loadInfoData = async (title) => {
   const result = await res.json();
 
   infoLink.href = result[0].originallink;
-  infoTitle.innerHTML = result[0].title.substring(0, 20) + '...';
-  infoContent.innerHTML = result[0].description.substring(0, 100) + '...';
+  infoTitle.textContent = result[0].title.substring(0, 20) + '...';
+  infoContent.textContent = result[0].description.substring(0, 100) + '...';
 };
 
 const loadStatusScore = async (url) => {
@@ -29,7 +29,7 @@ const loadStatusScore = async (url) => {
   const result = await response.json();
 
   truthScore.innerHTML = result.truth;
-  falseScore.innerHTML = result.lie;
+  lieScore.innerHTML = result.lie;
 };
 
 function init() {

@@ -17,16 +17,16 @@ body {
 }
 
 .margin_all{
-	margin: -40px 0px 0px 0px;
+	margin: -30px 0px 0px 0px;
 }
 
 .profile{
-	width: 100px;
-	height: 100px;
+	width: 85px;
+	height: 85px;
 	border-radius: 100%;
 	background: #fff;
 	text-align: center;
-	margin: 20px auto;
+	margin: 20px auto 10px;
 	
 	display: flex;
 	justify-content: center;
@@ -34,27 +34,47 @@ body {
 }
 
 .profile img {
-	width: 70px;
-	height: 70px;
+	width: 55px;
+	height: 55px;
 }
 
 .name {
-	font-size: 20px;
-	color: white;
-	margin: -10px 0px 0px 0px;
-}
-
-.medal {
-	width: 80px;
-	height: 60px;
-	margin: 5px 0px 0px 0px;
+	font-size: 25px;
+  color: white;
+  letter-spacing: 2px;
 }
 
 .rank_div {
-	margin: 6px 0px 0px 0px;
+  margin: 15px 0 30px;
 }
 
 .rank {
-	font-size:25px;
-	color:rgb(164,147,104);
+	font-size: 18px;
+  color: #fff;
+  width: 90px;
+  height: 30px;
+  border-radius: 20px;
+  line-height: 30px;
+  margin: 0 auto;
+}
+
+.btnBox {
+  text-align: right;
+  padding: 0 15px 10px;
+}
+
+.btnBox .logout {
+  cursor: pointer;
+  width: 120px;
+  height: 38px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  background: #ed6d5e;
+  transition: .3s;
+}
+
+.btnBox .logout:hover {
+  background: #eb5847;
 }

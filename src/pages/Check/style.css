@@ -9,8 +9,10 @@ body {
   background: rgba(0, 0, 0, 0.65);
   top: 0;
   left: 0;
-  padding: 0 10px;
+  padding: 0 20px;
   height: 60px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .back a {
@@ -18,6 +20,13 @@ body {
   text-decoration: none;
   color: #fff;
   line-height: 50px;
+}
+
+.back h1 {
+  color: #fff;
+  line-height: 60px;
+  font-weight: 500;
+  font-size: 20px;
 }
 
 .evalList {
@@ -34,6 +43,7 @@ body {
   padding: 10px;
   border-radius: 3px;
   background: rgba(255, 255, 255, 0.8);
+  animation: fadeIn .6s;
 }
 
 .evalList .evalBox .header .profileBox {
