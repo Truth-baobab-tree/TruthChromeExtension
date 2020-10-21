@@ -2,7 +2,7 @@ const loginForm = document.querySelector('.loginForm');
 const idInput = document.querySelector('.idBox input');
 const pwInput = document.querySelector('.pwBox input');
 
-const url = 'http://localhost:5050/user/api/login';
+const url = 'https://Truthserver.khjcode.repl.co/user/api/login';
 
 const handleSubmit = async (e) => {
   e.preventDefault();
@@ -24,11 +24,13 @@ const handleSubmit = async (e) => {
         });
     
         const result = await response.json();
-        alert(result);
 
-        localStorage.setItem('user', result);
-
-        location.href = '../Main/index.html';
+        if (result === 'user is not found.' || result === 'login fail.') {
+          alert(result);
+        } else {
+          localStorage.setItem('user', result);
+          location.href = '../Main/index.html';
+        }
       } else {
         alert('ID 와 Password 를 올바르게 입력해주세요.');
       }

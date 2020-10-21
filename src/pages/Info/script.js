@@ -1,6 +1,6 @@
 const container = document.querySelector('.infoContainer');
 
-const url = 'http://localhost:5050/info/get/news/sample';
+const url = 'https://Truthserver.khjcode.repl.co/info/get/news/sample';
 
 const loadInfoData = async (title) => {
   const res = await fetch(`${url}/${title}/10`);

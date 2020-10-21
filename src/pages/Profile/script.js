@@ -2,7 +2,7 @@ const name = document.querySelector('.name');
 const rank = document.querySelector('.rank');
 const logout = document.querySelector('.logout');
 
-const url = 'http://localhost:5050/user/api/find';
+const url = 'https://Truthserver.khjcode.repl.co/user/api/find';
 
 const rankSystem = {
   bronze: '170, 125, 98',

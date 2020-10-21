@@ -1,6 +1,6 @@
 const evalList = document.querySelector('.evalList');
 
-const target = 'http://localhost:5050/page/get/eval';
+const target = 'https://Truthserver.khjcode.repl.co/page/get/eval';
 
 const loadEvalData = async (url, key) => {
   const data = { url, key };

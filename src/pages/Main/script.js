@@ -5,8 +5,8 @@ const urlBox = document.querySelector('.url_box');
 const truthScore = document.querySelector('.truth');
 const lieScore = document.querySelector('.lie');
 
-const url1 = 'http://localhost:5050/info/get/news/sample';
-const url2 = 'http://localhost:5050/page/get/score';
+const url1 = 'https://Truthserver.khjcode.repl.co/info/get/news/sample';
+const url2 = 'https://Truthserver.khjcode.repl.co/page/get/score';
 
 const loadInfoData = async (title) => {
   const res = await fetch(`${url1}/${title}/1`);

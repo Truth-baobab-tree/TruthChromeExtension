@@ -3,7 +3,7 @@ const submitBtn = document.querySelector('.eval_submit');
 const truthBtn = document.querySelector('.truth');
 const lieBtn = document.querySelector('.lie');
 
-const target = 'http://localhost:5050/page/new/eval';
+const target = 'https://Truthserver.khjcode.repl.co/page/new/eval';
 
 const onSubmit = async (e) => {
   const reason = textBox.value.trim();
@@ -14,8 +14,6 @@ const onSubmit = async (e) => {
       const { url, key } = e.currentTarget;
       const status = select;
       const eval = { url, reason, status, key };
-
-      alert(eval.url);
 
       const res = await fetch(target, {
         method: 'POST',
