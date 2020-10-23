@@ -28,8 +28,8 @@ const loadStatusScore = async (url) => {
 
   const result = await response.json();
 
-  truthScore.innerHTML = result.truth;
-  lieScore.innerHTML = result.lie;
+  truthScore.textContent = result.truth;
+  lieScore.textContent = result.lie;
 };
 
 function init() {
