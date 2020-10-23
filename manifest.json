@@ -1,0 +1,25 @@
+{
+  "name": "Is this the truth?",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAotgTYPKcNTCIxhXY43ZJtQrfhMA9BmDdodo8MpyvbmtEQdlxAy/wMQHe+2mrSNRpwcvzrBuUotOSRYPjmEJeqUPcyhY/E03+e+AL72RRYHZNyLr6jjBpjYSVi86B5w0staRli1hzvuuAbKodH6TMJbwLKT9xT3pY9yRLrlK+VG78cQWTL5PdHdnpQE2AmJxHF98zpwkJnHNEaoj/LdfFgOk9pjpvrFtEVlQ6TBSZI7NBasOBkbaymxLqrh2xy0azwJGdn1arhpSZaynGxLm8VdxTiBEyiY2uifOn6g5LM/xOxt95WcCXdevwE6TBrTUhDsAW2TgLe7N56k/uhBF6yQIDAQAB",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "./public/icons/icon.png"
+  },
+  "description": "It is an extension program that helps users determine whether the information on the website they are currently accessing is true.",
+  "background": {
+    "scripts": [
+      "./script/background.js"
+    ]
+  },
+  "browser_action": {
+    "default_title": "Is this the truth?",
+    "default_icon": "./public/icons/icon.png",
+    "default_popup": "./src/pages/Main/index.html"
+  },
+  "author": "김형진 & 강태영",
+  "permissions": [
+    "tabs",
+    "activeTab"
+ ]
+}

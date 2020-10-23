@@ -12,9 +12,16 @@ const loadInfoData = async (title) => {
   const res = await fetch(`${url1}/${title}/1`);
   const result = await res.json();
 
-  infoLink.href = result[0].originallink;
-  infoTitle.textContent = result[0].title.substring(0, 20) + '...';
-  infoContent.textContent = result[0].description.substring(0, 100) + '...';
+  alert(result);
+
+  if (result[0]) {
+    infoLink.href = result[0].originallink;
+    infoTitle.textContent = result[0].title.substring(0, 20) + '...';
+    infoContent.textContent = result[0].description.substring(0, 100) + '...';
+  } else {
+    infoTitle.textContent = '관련 정보가 없습니다.';
+    infoContent.textContent = '';
+  }
 };
 
 const loadStatusScore = async (url) => {
