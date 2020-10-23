@@ -10,6 +10,7 @@ const rankSystem = {
   gold: '164, 147, 104',
   platinum: '203, 235, 227',
   diamond: '197, 223, 241',
+  admin: '44, 62, 80',
 };
 
 const setUserData = async (key) => {
