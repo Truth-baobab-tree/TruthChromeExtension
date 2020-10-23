@@ -37,40 +37,51 @@ const drawDOMElement = async (data) => {
 
     let header = document.createElement('div');
     header.classList.add('header');
+
     let profileBox = document.createElement('div');
     profileBox.classList.add('profileBox');
+
     let icon = document.createElement('div');
     icon.classList.add('icon');
     let userImg = document.createElement('img');
     userImg.src = '../../../public/images/user.svg';
     icon.appendChild(userImg);
+
     let userName = document.createElement('p');
     userName.textContent = name;
+
     profileBox.appendChild(icon);
     profileBox.appendChild(userName);
+
     let statusBox = document.createElement('div');
     statusBox.classList.add('statusBox');
+
     let img = document.createElement('img');
     img.src = status === 'truth' ? imgSrc + 'true.png' : imgSrc + 'false.png';
     statusBox.appendChild(img);
+    
     header.appendChild(profileBox);
     header.appendChild(statusBox);
 
     let evalContent = document.createElement('div');
     evalContent.classList.add('evalContent');
+    
     let content = document.createElement('p');
     content.textContent = reason;
     evalContent.appendChild(content);
 
     let footer = document.createElement('footer');
     footer.classList.add('footer');
+
     let rankName = document.createElement('p');
     rankName.classList.add('rank');
     rankName.textContent = rank;
     rankName.style.background = `rgba(${rankSystem[rank]})`;
+
     let date = document.createElement('time');
     date.classList.add('date');
     date.textContent = createdAt;
+
     footer.appendChild(rankName);
     footer.appendChild(date);
 
