@@ -57,7 +57,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2px solid #7f8c8d;
+  border-bottom: 2px solid #95a5a6;
 }
 
 .evalList .evalBox .header .statusBox {
@@ -103,4 +103,25 @@ body {
   font-size: 15px;
   text-align: left;
   color: #000;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  align-items: center;
+}
+
+.footer .date {
+  font-size: 13.5px;
+  color: #7f8c8d;
+}
+
+.footer .rank {
+  font-size: 13.5px;
+  padding: 0 10px;
+  height: 20px;
+  color: #fff;
+  border-radius: 5px;
 }
