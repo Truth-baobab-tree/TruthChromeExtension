@@ -24,11 +24,13 @@ const handleSubmit = async (e) => {
         });
     
         const result = await response.json();
-        alert(result);
 
-        localStorage.setItem('user', result);
-
-        location.href = '../Main/index.html';
+        if (result[0] === '$') {
+          localStorage.setItem('user', result);
+          location.href = '../Main/index.html';
+        } else {
+          alert('에러가 발생했습니다. 잠시후 다시 시도해주세요.');
+        }
       } else {
         alert('ID 와 Password 를 올바르게 입력해주세요.');
       }
