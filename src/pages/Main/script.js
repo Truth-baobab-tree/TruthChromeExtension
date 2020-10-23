@@ -12,8 +12,6 @@ const loadInfoData = async (title) => {
   const res = await fetch(`${url1}/${title}/1`);
   const result = await res.json();
 
-  alert(result);
-
   if (result[0]) {
     infoLink.href = result[0].originallink;
     infoTitle.textContent = result[0].title.substring(0, 20) + '...';
