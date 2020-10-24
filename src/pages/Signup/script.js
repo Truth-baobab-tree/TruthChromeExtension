@@ -28,6 +28,8 @@ const handleSubmit = async (e) => {
         if (result[0] === '$') {
           localStorage.setItem('user', result);
           location.href = '../Main/index.html';
+        } else if (result === 'user is definition.') {
+          alert('이미 존재하는 아이디입니다.');
         } else {
           alert('에러가 발생했습니다. 잠시후 다시 시도해주세요.');
         }

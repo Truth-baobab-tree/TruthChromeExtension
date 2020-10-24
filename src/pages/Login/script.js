@@ -26,7 +26,7 @@ const handleSubmit = async (e) => {
         const result = await response.json();
 
         if (result === 'user is not found.' || result === 'login fail.') {
-          alert(result);
+          alert("아이디 또는 비밀번호가 올바르지 않습니다.");
         } else {
           localStorage.setItem('user', result);
           location.href = '../Main/index.html';
