@@ -93,7 +93,7 @@ const drawDOMElement = async (data) => {
   });
 };
 
-const deleteDOMElement = () => {
+const removeDOMElement = () => {
   const array = document.querySelectorAll('.evalBox');
 
   for (let i = 0; i < array.length; i ++) evalList.removeChild(array[i]);
@@ -117,11 +117,13 @@ function init() {
       localStorage.setItem('check', option);
     }
 
+    select.value = option;
+
     select.addEventListener('change', (e) => {
       const option = e.target.value;
       localStorage.setItem('check', option);
 
-      deleteDOMElement();
+      removeDOMElement();
       
       loadEvalData(url, key, option);
     });
