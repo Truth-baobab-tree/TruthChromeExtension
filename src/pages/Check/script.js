@@ -1,20 +1,20 @@
 const evalList = document.querySelector('.evalList');
+const select = document.querySelector('select');
 
-const target = 'https://Truthserver.khjcode.repl.co/page/get/eval';
+const target = 'https://truthserver.khjcode.repl.co/page/get/eval';
 
-const rankSystem = {
-  bronze: '170, 125, 98',
-  silver: '186, 181, 178',
-  gold: '164, 147, 104',
-  platinum: '203, 235, 227',
-  diamond: '197, 223, 241',
-  admin: '44, 62, 80',
-};
+const rankSystem = [
+  { admin: '44, 62, 80' },
+  { diamond: '197, 223, 241' },
+  { platinum: '203, 235, 227' },
+  { gold: '164, 147, 104' },
+  { silver: '186, 181, 178' },
+  { bronze: '170, 125, 98' },
+];
 
-const loadEvalData = async (url, key) => {
+const loadEvalData = async (url, key, option) => {
   const data = { url, key };
-
-  const res = await fetch(target, {
+  const res = await fetch(`${target}/${option}`, {
     method: 'POST',
     headers: {
       'Content-type': 'application/json;charset=utf-8',
@@ -75,8 +75,8 @@ const drawDOMElement = async (data) => {
 
     let rankName = document.createElement('p');
     rankName.classList.add('rank');
-    rankName.textContent = rank;
-    rankName.style.background = `rgba(${rankSystem[rank]})`;
+    rankName.textContent = Object.keys(rankSystem[rank]);
+    rankName.style.background = `rgba(${Object.values(rankSystem[rank])})`;
 
     let date = document.createElement('time');
     date.classList.add('date');
@@ -93,6 +93,12 @@ const drawDOMElement = async (data) => {
   });
 };
 
+const deleteDOMElement = () => {
+  const array = document.querySelectorAll('.evalBox');
+
+  for (let i = 0; i < array.length; i ++) evalList.removeChild(array[i]);
+};
+
 function init() {
   const key = localStorage.getItem('user');
   if (!key) {
@@ -105,7 +111,22 @@ function init() {
       url = url.substring(0, url.length - 1);
     }
 
-    loadEvalData(url, key);
+    const check = localStorage.getItem('check');
+    const option = check || 'rank';
+    if (!check) {
+      localStorage.setItem('check', option);
+    }
+
+    select.addEventListener('change', (e) => {
+      const option = e.target.value;
+      localStorage.setItem('check', option);
+
+      deleteDOMElement();
+      
+      loadEvalData(url, key, option);
+    });
+
+    loadEvalData(url, key, option);
   });
 }
 

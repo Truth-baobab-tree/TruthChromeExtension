@@ -2,7 +2,7 @@ const signupForm = document.querySelector('.signupForm');
 const idInput = document.querySelector('.idBox input');
 const pwInput = document.querySelector('.pwBox input');
 
-const url = 'https://Truthserver.khjcode.repl.co/user/api/signup';
+const url = 'https://truthserver.khjcode.repl.co/user/api/signup';
 
 const handleSubmit = async (e) => {
   e.preventDefault();

@@ -15,7 +15,7 @@ a {
   text-decoration: none;
 }
 
-button:focus {
+button:focus, select:focus, input:focus {
   outline: none;
 }
 

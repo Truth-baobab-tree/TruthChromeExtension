@@ -4,14 +4,14 @@ const logout = document.querySelector('.logout');
 
 const url = 'https://Truthserver.khjcode.repl.co/user/api/find';
 
-const rankSystem = {
-  bronze: '170, 125, 98',
-  silver: '186, 181, 178',
-  gold: '164, 147, 104',
-  platinum: '203, 235, 227',
-  diamond: '197, 223, 241',
-  admin: '44, 62, 80',
-};
+const rankSystem = [
+  { admin: '44, 62, 80' },
+  { diamond: '197, 223, 241' },
+  { platinum: '203, 235, 227' },
+  { gold: '164, 147, 104' },
+  { silver: '186, 181, 178' },
+  { bronze: '170, 125, 98' },
+];
 
 const setUserData = async (key) => {
   const res = await fetch(url, {
@@ -25,8 +25,8 @@ const setUserData = async (key) => {
   const data = await res.json();
 
   name.textContent = data.name;
-  rank.textContent = data.rank;
-  rank.style.background = `rgb(${rankSystem[data.rank]})`;
+  rank.textContent = Object.keys(rankSystem[data.rank]);
+  rank.style.background = `rgb(${Object.values(rankSystem[data.rank])})`;
 }
 
 function onLogout() {
