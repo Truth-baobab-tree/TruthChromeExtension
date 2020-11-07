@@ -1,6 +1,6 @@
 body {
 	width: 400px;
-	height: 450px;
+  height: 450px;
 }
 
 .top_line_box {
@@ -42,6 +42,46 @@ body {
 	outline: none;
 }
 
+
+.factCheckContainer {
+  margin: 35px auto 0;
+  width: 90%;
+  height: 110px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 10px 5px;
+}
+
+.factCheckContainer .topLine {
+  width: 100%;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.factCheckContainer .topLine img {
+  width: 20px;
+  height: 20px;
+}
+
+.factCheckContainer .topLine h1 {
+  font-size: 20px;
+  margin-left: 10px;
+  font-weight: 400;
+}
+
+.factCheckContainer p {
+  font-size: 14px;
+}
+
+.factCheckContainer a {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.factCheckContainer a:hover {
+  text-decoration: underline;
+}
+
 .statusContainer {
 	display: flex;
 	width: 100%;
@@ -53,20 +93,24 @@ body {
 .statusContainer .box {
   margin: 0 20px;
   width: 70px;
+  display: flex;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .statusContainer .box img {
-	width: 60px;
-  height: 60px;
+	width: 50px;
+  height: 50px;
 }
 
 .statusContainer .box .score {
 	text-align: center;
 	color: #fff;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
-  margin: 5px 0 0;
+  margin: 0px 0px 0px 15px;
+  line-height: 25px;
 }
 
 .EvalButtonBox {
@@ -105,16 +149,37 @@ body {
 
 .infoContainer {
   width: 100%;
-  margin: 20px 0 0;
+  margin: 10px 0 0;
   padding: 10px;
 }
 
-.infoContainer h1 {
+.infoContainer .topLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infoContainer .topLine h1 {
   color: #fff;
   font-size: 20px;
   font-weight: 400;
   height: 36px;
   border-bottom: 2px solid rgb(118,113,113);
+}
+
+.infoContainer .topLine button {
+  width: 25px;
+  height: 25px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transform: rotate(0deg);
+}
+
+.infoContainer .topLine button img {
+  width: 100%;
+  height: 100%;
+  color: #fff;
 }
 
 .infoContainer .infoBox {
@@ -124,6 +189,7 @@ body {
   background: rgba(255, 255, 255, 0.8);
   margin: 8px auto 0;
   padding: 5px;
+  display: none;
 }
 
 .infoContainer .title a h2 {

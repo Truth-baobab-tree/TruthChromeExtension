@@ -2,11 +2,17 @@ const infoLink = document.querySelector('.infoContainer .title a');
 const infoTitle = infoLink.querySelector('h2');
 const infoContent = document.querySelector('.infoContainer .description p');
 const urlBox = document.querySelector('.url_box');
+const infoBox = document.querySelector('.infoBox');
 const truthScore = document.querySelector('.truth');
 const lieScore = document.querySelector('.lie');
+const downButton = document.querySelector('.infoContainer .topLine button');
+const factCheckContainer = document.querySelector('.factCheckContainer');
+const factCheckTitle = factCheckContainer.querySelector('p');
+const factCheckLink = factCheckContainer.querySelector('a');
 
-const url1 = 'https://Truthserver.khjcode.repl.co/info/get/news/sample';
-const url2 = 'https://Truthserver.khjcode.repl.co/page/get/score';
+const url1 = 'https://truthserver.khjcode.repl.co/info/get/news/sample';
+const url2 = 'https://truthserver.khjcode.repl.co/page/get/score';
+const url3 = 'https://truthserver.khjcode.repl.co/info/get/factcheck';
 
 const loadInfoData = async (title) => {
   const res = await fetch(`${url1}/${title}/1`);
@@ -37,7 +43,30 @@ const loadStatusScore = async (url) => {
   lieScore.textContent = result.lie;
 };
 
+const loadFactCheckData = async (title) => {
+  const res = await fetch(`${url3}/${title}`);
+  const result = await res.json();
+
+  if (result.title) {
+    let { title, link } = result;
+    title = title.trim();
+    link = link.trim();
+    factCheckTitle.textContent = `${title}${title[title.length - 1] === '?' ? '' : '?'}`;
+    factCheckLink.href = link;
+  } else {
+    factCheckContainer.style.display = 'none';
+  }
+};
+
+const onClickDownButton = () => {
+  let enable = infoBox.style.display;
+  infoBox.style.display = enable === 'none' ? 'block' : 'none';
+  downButton.style.transform = enable === 'block' ? 'rotate(0deg)' : 'rotate(180deg)';
+};
+
 function init() {
+  downButton.addEventListener('click', onClickDownButton);
+
   const user = localStorage.getItem('user');
 
   if (!user) {
@@ -63,6 +92,7 @@ function init() {
         title = title.substring(0, i);
       }
       loadInfoData(title);
+      loadFactCheckData(title);
     });
   }
 }

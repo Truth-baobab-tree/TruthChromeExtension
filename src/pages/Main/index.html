@@ -21,28 +21,44 @@
     </a>
   </div>
 
-  <div class="statusContainer">
-    <div class="box">
-      <img src="../../../public/images/true.png" />
-      <p class="score truth">0</p>
+  <section class="evalSection">
+    <div class="statusContainer">
+      <div class="box">
+        <img src="../../../public/images/true.png" />
+        <p class="score truth">0</p>
+      </div>
+      <div class="box">
+        <img src="../../../public/images/false.png" />
+        <p class="score lie">0</p>
+      </div>
     </div>
-    <div class="box">
-      <img src="../../../public/images/false.png" />
-      <p class="score lie">0</p>
+  
+    <div class="EvalButtonBox">
+      <a href='../Check/index.html'>
+        <button class="button">평가보기</button>
+      </a>
+      <a href='../Eval/index.html'>
+        <button class="button">평가하기</button>
+      </a>
     </div>
-  </div>
+  </section>
 
-  <div class="EvalButtonBox">
-    <a href='../Check/index.html'>
-      <button class="button">평가보기</button>
-    </a>
-    <a href='../Eval/index.html'>
-      <button class="button">평가하기</button>
-    </a>
+  <div class="factCheckContainer">
+    <div class="topLine">
+      <img src='../../../public/images/pin.svg' />
+      <h1>팩트체크</h1>
+    </div>
+    <p>loading...</p>
+    <a target="_blank">자세히보기</a>
   </div>
 
   <div class="infoContainer">
-    <h1>관련 정보</h1>
+    <div class="topLine">
+      <h1>관련 정보</h1>
+      <button>
+        <img src='../../../public/images/down.svg' />
+      </button>
+    </div>
     <div class="infoBox">
       <div class="title">
         <a target="_blank">
@@ -58,6 +74,9 @@
     </div>
   </div>
 
+  <!--
+    아이콘 제작자 <a href="https://www.flaticon.com/kr/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/kr/" title="Flaticon"> www.flaticon.com</a>
+  -->
 </body>
 
 </html>
