@@ -1,2 +1,2 @@
-TRUTH_PROJECT_SERVER
+TRUTH_PROJECT_ChromeExtension
 =============
