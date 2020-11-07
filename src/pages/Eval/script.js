@@ -28,6 +28,8 @@ const onSubmit = async (e) => {
       if (result === 'success') {
         alert('성공적으로 등록 되었습니다.');
         location.href = '../Main/index.html';
+      } else if (result === 'defined') {
+        alert('이미 평가를 등록하였습니다.');
       } else {
         alert('error');
       }
