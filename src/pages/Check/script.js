@@ -26,9 +26,8 @@ const loadEvalData = async (url, key, option) => {
   drawDOMElement(result);
 };
 
-const drawDOMElement = async (data) => {
+const drawDOMElement = async data => {
   const imgSrc = '../../../public/images/';
-
   data.forEach(item => {
     let { status, reason, name, rank, createdAt } = item;
 
