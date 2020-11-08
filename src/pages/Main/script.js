@@ -59,14 +59,12 @@ const loadFactCheckData = async (title) => {
 };
 
 const onClickDownButton = () => {
-  let enable = infoBox.style.display;
+  const enable = infoBox.style.display;
   infoBox.style.display = enable === 'none' ? 'block' : 'none';
   downButton.style.transform = enable === 'block' ? 'rotate(0deg)' : 'rotate(180deg)';
 };
 
 function init() {
-  downButton.addEventListener('click', onClickDownButton);
-
   const user = localStorage.getItem('user');
 
   if (!user) {
@@ -95,6 +93,9 @@ function init() {
       loadFactCheckData(title);
     });
   }
+
+  downButton.addEventListener('click', onClickDownButton);
+  infoBox.style.display = 'none';
 }
 
 init();
