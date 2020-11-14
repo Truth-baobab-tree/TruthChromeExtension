@@ -46,7 +46,7 @@ body {
 .factCheckContainer {
   margin: 35px auto 0;
   width: 90%;
-  height: 110px;
+  min-height: 110px;
   background: #fff;
   border-radius: 5px;
   padding: 10px 5px;
@@ -64,18 +64,33 @@ body {
 }
 
 .factCheckContainer .topLine h1 {
-  font-size: 20px;
+  font-size: 18px;
   margin-left: 10px;
   font-weight: 400;
 }
 
 .factCheckContainer p {
-  font-size: 14px;
+  font-size: 15px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.factCheckContainer .link_box {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1.5px solid #bdc3c7;
+  height: 30px;
 }
 
 .factCheckContainer a {
   font-size: 14px;
   margin-top: 5px;
+  font-weight: bold;
+}
+.factCheckContainer .seeMore {
+  color: #3498db;
 }
 
 .factCheckContainer a:hover {

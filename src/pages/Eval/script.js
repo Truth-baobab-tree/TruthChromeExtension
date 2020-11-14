@@ -3,7 +3,7 @@ const submitBtn = document.querySelector('.eval_submit');
 const truthBtn = document.querySelector('.truth');
 const lieBtn = document.querySelector('.lie');
 
-const target = 'https://Truthserver.khjcode.repl.co/page/new/eval';
+let method = 'new';
 
 const onSubmit = async (e) => {
   const reason = textBox.value.trim();
@@ -15,7 +15,7 @@ const onSubmit = async (e) => {
       const status = select;
       const eval = { url, reason, status, key };
 
-      const res = await fetch(target, {
+      const res = await fetch(`https://truthserver.khjcode.repl.co/page/${method}/eval`, {
         method: 'POST',
         headers: {
           'Content-type': 'application/json;charset=utf-8',
@@ -38,6 +38,36 @@ const onSubmit = async (e) => {
     }
   } else {
     alert('버튼을 눌러 평가를 해주세요.');
+  }
+};
+
+const checkStatus = async (url, key) => {
+  const res = await fetch('https://truthserver.khjcode.repl.co/page/get/status', {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json;charset=utf-8',
+    },
+    body: JSON.stringify({ url, key }),
+  });
+
+  const result = await res.json();
+
+  const { status, reason } = result;
+
+  if (result === 'data is losted') {
+    alert('오류가 발생했습니다. 잠시 후에 다시 시도해주세요.')
+  } else if (result.status) {
+    submitBtn.textContent = '업데이트';
+    textBox.textContent = reason;
+    if (status === 'truth') {
+      selected = '';
+      truthBtn.classList.remove('clicked');
+    } else {
+      selected = 'truth';
+      truthBtn.classList.add('clicked');
+      lieBtn.classList.remove('clicked');
+    }
+    method = 'update';
   }
 };
 
@@ -76,6 +106,8 @@ function init() {
     if (url.charAt(url.length - 1) === '/') {
       url = url.substring(0, url.length - 1);
     }
+
+    checkStatus(url, key);
     
     submitBtn.addEventListener('click', onSubmit, false);
     submitBtn.url = url;

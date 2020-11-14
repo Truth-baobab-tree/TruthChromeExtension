@@ -8,7 +8,7 @@ const lieScore = document.querySelector('.lie');
 const downButton = document.querySelector('.infoContainer .topLine button');
 const factCheckContainer = document.querySelector('.factCheckContainer');
 const factCheckTitle = factCheckContainer.querySelector('p');
-const factCheckLink = factCheckContainer.querySelector('a');
+const factCheckLink = factCheckContainer.querySelector('.seeMore');
 
 const url1 = 'https://truthserver.khjcode.repl.co/info/get/news/sample';
 const url2 = 'https://truthserver.khjcode.repl.co/page/get/score';
