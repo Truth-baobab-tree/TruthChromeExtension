@@ -60,12 +60,12 @@ const checkStatus = async (url, key) => {
     submitBtn.textContent = '업데이트';
     textBox.textContent = reason;
     if (status === 'truth') {
-      selected = '';
-      truthBtn.classList.remove('clicked');
-    } else {
       selected = 'truth';
       truthBtn.classList.add('clicked');
-      lieBtn.classList.remove('clicked');
+    } else {
+      selected = 'lie';
+      truthBtn.classList.remove('clicked');
+      lieBtn.classList.add('clicked');
     }
     method = 'update';
   }
