@@ -34,7 +34,7 @@ const handleSubmit = async (e) => {
         } else if (result === 'user is definition.') {
           alert('이미 존재하는 아이디입니다.');
         } else if (result === 'data length is excess.') {
-          alert('글자 수가 제한 되었습니다.');
+          alert('ID 는 5 ~ 20 글자, Password 는 10 ~ 100 글자 사이로 입력해주세요.')
         } else {
           alert('에러가 발생했습니다. 잠시후 다시 시도해주세요.');
         }
