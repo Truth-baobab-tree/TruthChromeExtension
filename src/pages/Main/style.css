@@ -1,36 +1,36 @@
 body {
-	width: 400px;
+  width: 400px;
   height: 450px;
 }
 
 .top_line_box {
-	display: flex;
-	align-items: center;
-	width: 100;
-	justify-content: space-between;
-	padding: 15px 15px 0px 20px;
+  display: flex;
+  align-items: center;
+  width: 100;
+  justify-content: space-between;
+  padding: 15px 15px 0px 20px;
 }
 
 .userCircle {
-	width: 40px;
-	height: 40px;
-	border-radius: 100%;
-	background: #fff;
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile_img {
-	width: 20px;
-	height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .url_box {
-	text-align:center;
-	width: 300px;
-  height:30px;
+  text-align: center;
+  width: 300px;
+  height: 30px;
   padding-left: 10px;
   border: none;
   background: #7f8c8d;
@@ -39,7 +39,7 @@ body {
 }
 
 .url_box:focus {
-	outline: none;
+  outline: none;
 }
 
 
@@ -89,6 +89,7 @@ body {
   margin-top: 5px;
   font-weight: bold;
 }
+
 .factCheckContainer .seeMore {
   color: #3498db;
 }
@@ -98,11 +99,11 @@ body {
 }
 
 .statusContainer {
-	display: flex;
-	width: 100%;
-	margin: 30px auto 20px;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  width: 100%;
+  margin: 30px auto 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 .statusContainer .box {
@@ -115,13 +116,13 @@ body {
 }
 
 .statusContainer .box img {
-	width: 50px;
+  width: 50px;
   height: 50px;
 }
 
 .statusContainer .box .score {
-	text-align: center;
-	color: #fff;
+  text-align: center;
+  color: #fff;
   font-size: 25px;
   font-weight: 600;
   margin: 0px 0px 0px 15px;
@@ -129,18 +130,18 @@ body {
 }
 
 .EvalButtonBox {
-	width:100%;
-	display: flex;
-	align-items: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
   justify-content: center;
   margin: 25px auto 0;
 }
 
 .EvalButtonBox a .button {
-	border-radius: 5px;
-	border: none;
-	cursor: pointer;
-	font-size: 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
   font-weight: 600;
   width: 160px;
   height: 35px;
@@ -154,7 +155,7 @@ body {
 }
 
 .EvalButtonBox a .button:hover {
-	background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .EvalButtonBox a {
@@ -172,7 +173,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid rgb(118,113,113);
+  border-bottom: 2px solid rgb(118, 113, 113);
 }
 
 .infoContainer .topLine h1 {
@@ -215,7 +216,8 @@ body {
   max-height: 45px;
 }
 
-.infoContainer .title a h2:hover, .infoContainer .seeMore a:hover {
+.infoContainer .title a h2:hover,
+.infoContainer .seeMore a:hover {
   text-decoration: underline;
 }
 
@@ -234,4 +236,3 @@ body {
   color: #fff;
   font-size: 16px;
 }
-

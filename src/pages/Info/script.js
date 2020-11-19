@@ -14,10 +14,10 @@ const drawDOMElement = (data) => {
     data.forEach(item => {
       let infoBox = document.createElement("div");
       infoBox.classList.add('infoBox');
-  
+
       let infoTitleBox = document.createElement("div");
       infoTitleBox.classList.add('knight_title_div');
-  
+
       let infoLink = document.createElement("a");
       let infoTitle = document.createElement("h2");
       let title = document.createTextNode(item.title);
@@ -25,25 +25,25 @@ const drawDOMElement = (data) => {
       infoLink.appendChild(infoTitle);
       infoLink.href = item.originallink;
       infoLink.target = '_blank';
-  
+
       let infoContentBox = document.createElement("div");
       infoContentBox.classList.add('knight_content_div');
-  
+
       let infoContent = document.createElement("p");
       let content = document.createTextNode(item.description);
       infoContent.appendChild(content);
-  
+
       let hrBox = document.createElement("div");
       hrBox.classList.add("hr_div");
       let hr = document.createElement("hr");
-      
+
       infoTitleBox.appendChild(infoLink);
       infoContentBox.appendChild(infoContent);
       hrBox.appendChild(hr);
-  
+
       infoBox.appendChild(infoTitleBox);
       infoBox.appendChild(infoContentBox);
-  
+
       container.appendChild(infoBox);
       container.appendChild(hrBox);
     });

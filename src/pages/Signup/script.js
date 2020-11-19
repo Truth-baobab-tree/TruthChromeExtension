@@ -13,8 +13,11 @@ const handleSubmit = async (e) => {
   if (name.length < 16 && name.length > 4 && password.length < 101 && password.length > 9) {
     if (name.indexOf(';') === -1 && password.indexOf(';') === -1) {
       if (name && password && name !== '' && password !== '') {
-        const user = { name, password };
-    
+        const user = {
+          name,
+          password
+        };
+
         const response = await fetch(url, {
           method: 'POST',
           headers: {
@@ -22,7 +25,7 @@ const handleSubmit = async (e) => {
           },
           body: JSON.stringify(user),
         });
-    
+
         const result = await response.json();
 
         if (result[0] === '$') {
@@ -46,7 +49,7 @@ const handleSubmit = async (e) => {
 
 function init() {
   const user = localStorage.getItem('user');
-  
+
   if (user) {
     location.href = '../Main/index.html';
   } else {

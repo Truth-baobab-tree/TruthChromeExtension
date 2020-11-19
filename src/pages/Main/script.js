@@ -34,7 +34,9 @@ const loadStatusScore = async (url) => {
     headers: {
       'Content-type': 'application/json;charset=utf-8',
     },
-    body: JSON.stringify({ url }),
+    body: JSON.stringify({
+      url
+    }),
   });
 
   const result = await response.json();
@@ -48,7 +50,10 @@ const loadFactCheckData = async (title) => {
   const result = await res.json();
 
   if (result.title) {
-    let { title, link } = result;
+    let {
+      title,
+      link
+    } = result;
     title = title.trim();
     link = link.trim();
     factCheckTitle.textContent = `${title}${title[title.length - 1] === '?' ? '' : '?'}`;
@@ -70,14 +75,17 @@ function init() {
   if (!user) {
     location.href = '../Login/index.html';
   } else {
-    chrome.tabs.query({ active: true, lastFocusedWindow: true }, tabs => {
+    chrome.tabs.query({
+      active: true,
+      lastFocusedWindow: true
+    }, tabs => {
       let url = tabs[0].url;
       urlBox.value = url;
 
       if (url.charAt(url.length - 1) === '/') {
         url = url.substring(0, url.length - 1);
       }
-      
+
       loadStatusScore(url);
     });
 

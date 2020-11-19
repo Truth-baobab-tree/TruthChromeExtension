@@ -1,6 +1,6 @@
 body {
-  width: 400px!important;
-  height: 300px!important;
+  width: 400px !important;
+  height: 300px !important;
   text-align: center;
 }
 
@@ -66,11 +66,13 @@ body {
   border-right: 4px solid #e74c3c;
 }
 
-.loginForm .inputBox input:focus, .loginForm .buttonBox button:focus {
+.loginForm .inputBox input:focus,
+.loginForm .buttonBox button:focus {
   outline: none;
 }
 
-.loginForm .inputBox input, .loginForm .buttonBox button {
+.loginForm .inputBox input,
+.loginForm .buttonBox button {
   border: none;
 }
 

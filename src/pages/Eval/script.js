@@ -11,9 +11,17 @@ const onSubmit = async (e) => {
 
   if (select && select !== '') {
     if (reason && reason !== '') {
-      const { url, key } = e.currentTarget;
+      const {
+        url,
+        key
+      } = e.currentTarget;
       const status = select;
-      const eval = { url, reason, status, key };
+      const eval = {
+        url,
+        reason,
+        status,
+        key
+      };
 
       const res = await fetch(`https://truthserver.khjcode.repl.co/page/${method}/eval`, {
         method: 'POST',
@@ -47,12 +55,18 @@ const checkStatus = async (url, key) => {
     headers: {
       'Content-type': 'application/json;charset=utf-8',
     },
-    body: JSON.stringify({ url, key }),
+    body: JSON.stringify({
+      url,
+      key
+    }),
   });
 
   const result = await res.json();
 
-  const { status, reason } = result;
+  const {
+    status,
+    reason
+  } = result;
 
   if (result === 'data is losted') {
     alert('오류가 발생했습니다. 잠시 후에 다시 시도해주세요.')
@@ -101,14 +115,17 @@ function init() {
     }
   }));
 
-  chrome.tabs.query({ active: true, lastFocusedWindow: true }, tabs => {
+  chrome.tabs.query({
+    active: true,
+    lastFocusedWindow: true
+  }, tabs => {
     let url = tabs[0].url;
     if (url.charAt(url.length - 1) === '/') {
       url = url.substring(0, url.length - 1);
     }
 
     checkStatus(url, key);
-    
+
     submitBtn.addEventListener('click', onSubmit, false);
     submitBtn.url = url;
     submitBtn.key = key;
