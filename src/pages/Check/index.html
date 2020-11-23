@@ -8,17 +8,18 @@
   <link rel="stylesheet" href="./style.css" type="text/css" />
   <link rel="stylesheet" href="../../theme/global.css" type="text/css" />
   <script src='./script.js' async></script>
+  <script src='../../theme/translater.js' defer></script>
 </head>
 
 <body>
   <div class="back">
     <a href='../Main/index.html'>←</a>
-    <h1>평가 기록</h1>
+    <h1 class="trs" id="check-EvalRec"></h1>
   </div>
   <div class="sort-line">
     <select id="sort-select">
-      <option value="rank">랭크순</option>
-      <option value="latest">최신순</option>
+      <option value="rank" class="trs" id="check-rank"></option>
+      <option value="latest" class="trs" id="check-latest"></option>
     </select>
   </div>
   <section class="evalList"></section>
