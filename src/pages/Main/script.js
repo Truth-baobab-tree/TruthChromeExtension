@@ -14,6 +14,7 @@ const url1 = 'https://truthserver.khjcode.repl.co/info/get/news/sample';
 const url2 = 'https://truthserver.khjcode.repl.co/page/get/score';
 const url3 = 'https://truthserver.khjcode.repl.co/info/get/factcheck';
 
+
 const loadInfoData = async (title) => {
   const res = await fetch(`${url1}/${title}/1`);
   const result = await res.json();
@@ -71,6 +72,9 @@ const onClickDownButton = () => {
 
 function init() {
   const user = localStorage.getItem('user');
+
+  const language = localStorage.getItem('language');
+  if (!language) localStorage.setItem('language', 'en');
 
   if (!user) {
     location.href = '../Login/index.html';

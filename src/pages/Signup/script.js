@@ -10,7 +10,7 @@ const handleSubmit = async (e) => {
   const name = idInput.value.trim();
   const password = pwInput.value.trim();
 
-  if (name.length < 16 && name.length > 4 && password.length < 101 && password.length > 9) {
+  if (name.length <= 20 && name.length >= 5 && password.length <= 100 && password.length >= 10) {
     if (name.indexOf(';') === -1 && password.indexOf(';') === -1) {
       if (name && password && name !== '' && password !== '') {
         const user = {

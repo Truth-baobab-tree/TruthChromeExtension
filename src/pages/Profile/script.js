@@ -1,12 +1,9 @@
 const name = document.querySelector('.name');
 const rank = document.querySelector('.rank');
 const logout = document.querySelector('.logout');
+const lang_select = document.querySelector('.language');
 
-const url = 'https://Truthserver.khjcode.repl.co/user/api/find';
-
-function getLanguage() {
-  return navigator.language || navigator.userLanguage;
-}
+const url = 'https://truthserver.khjcode.repl.co/user/api/find';
 
 const rankSystem = [{
     admin: '44, 62, 80'
@@ -56,6 +53,12 @@ function init() {
   if (!user) {
     location.href = '../Login/index.html';
   } else {
+    Object.keys(lang_select.options).map(i => {
+      lang_select.options[i].selected = lang_select.options[i].value === localStorage.getItem('language');
+    });
+    lang_select.addEventListener('change', (e) => {
+      localStorage.setItem('language', e.target.value);
+    });
     logout.addEventListener('click', onLogout);
     setUserData(user);
   }
