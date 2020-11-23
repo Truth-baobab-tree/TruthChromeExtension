@@ -44,7 +44,7 @@ const setUserData = async (key) => {
 }
 
 function onLogout() {
-  localStorage.clear();
+  localStorage.removeItem('user');
   location.href = '../Main/index.html';
 }
 
