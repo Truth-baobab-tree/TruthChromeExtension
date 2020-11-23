@@ -78,3 +78,8 @@ body {
 .btnBox .logout:hover {
   background: #eb5847;
 }
+
+.select_language {
+  text-align: right;
+  margin: -20px 20px 0px 0px;
+}

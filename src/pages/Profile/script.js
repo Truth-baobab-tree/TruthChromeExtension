@@ -4,6 +4,10 @@ const logout = document.querySelector('.logout');
 
 const url = 'https://Truthserver.khjcode.repl.co/user/api/find';
 
+function getLanguage() {
+  return navigator.language || navigator.userLanguage;
+}
+
 const rankSystem = [{
     admin: '44, 62, 80'
   },

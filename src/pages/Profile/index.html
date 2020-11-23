@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -8,11 +8,19 @@
   <link rel="stylesheet" href="./style.css" type="text/css" />
   <link rel="stylesheet" href="../../theme/global.css" type="text/css" />
   <script src='./script.js' async></script>
+  <script src="../../theme/i18next.js"></script>
+  <script src="./i18n.js" defer></script>
 </head>
 
 <body>
   <div class="back">
     <a href='../Main/index.html'>←</a>
+  </div>
+  <div class="select_language">
+	<select class="language" id="lang-select">
+		<option value="en">English</option>
+		<option value="ko">한국어</option>
+	</select>
   </div>
   <div class="margin_all">
     <div class="profile">
@@ -28,7 +36,7 @@
     </div>
   </div>
   <div class="btnBox">
-    <button class="logout">Logout</button>
+    <button class="logout" id="logout"></button>
   </div>
 </body>
 
