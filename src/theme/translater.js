@@ -10,7 +10,7 @@ const lang_sys = {
   },
 };
 
-function init() {
+function change() {
   const language = localStorage.getItem('language');
 
   Object.keys(target).map(i => {
@@ -18,9 +18,4 @@ function init() {
   });
 }
 
-lang.addEventListener('change', () => {
-  setTimeout(() => {
-    init();
-  }, 50);
-});
-init();
+change();

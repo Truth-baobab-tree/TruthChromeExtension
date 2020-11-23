@@ -58,6 +58,7 @@ function init() {
     });
     lang_select.addEventListener('change', (e) => {
       localStorage.setItem('language', e.target.value);
+      change();
     });
     logout.addEventListener('click', onLogout);
     setUserData(user);
