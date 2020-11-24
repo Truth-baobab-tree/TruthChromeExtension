@@ -97,10 +97,9 @@ function init() {
       code: 'document.querySelector("head title").textContent'
     }, (res) => {
       let title = String(res);
-      const i = title.indexOf("|");
-      if (i !== -1) {
-        title = title.substring(0, i);
-      }
+      if (title.includes('|')) title = title.substring(0, title.indexOf('|'));
+      if (title.includes('?')) title = title.substring(0, title.indexOf('?'));
+      
       loadInfoData(title);
       loadFactCheckData(title);
     });
