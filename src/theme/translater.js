@@ -50,6 +50,30 @@ const lang_sys = {
     "signup-signup": "Sign up",
     "signup-gologin": "You have account?"
   },
+  jp: {
+    "profile-logout": "Logout",
+    "main-view": "View Evaluation",
+    "main-write": "Write Evaluation",
+    "main-factcheck": "Fact Check",
+    "main-detail": "Detail",
+    "main-source": "Sources",
+    "main-releinfo": "Relevant Info",
+    "main-seemore": "See More",
+    "loading": "Loading...",
+    "check-EvalRec": "Evaluation Record",
+    "check-rank": "Rank",
+    "check-latest": "Latest",
+    "eval-warn": "The user yourself is responsible for the submission.",
+    "eval-truth": "truth",
+    "eval-fake": "fake",
+    "eval-submit": "Submit",
+    "eval-update": "Update",
+    "info-ReleInfo": "Relevant Info",
+    "login-login": "Login",
+    "login-gosignup": "You have not account?",
+    "signup-signup": "Sign up",
+    "signup-gologin": "You have account?"
+  },
 };
 
 function change() {
