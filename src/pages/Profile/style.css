@@ -5,8 +5,10 @@ body {
 }
 
 .back {
-  text-align: left;
+  display: flex;
+  justify-content: left;
   padding: 0 20px;
+  margin-bottom: 25px;
 }
 
 .back a {
@@ -81,5 +83,24 @@ body {
 
 .select_language {
   text-align: right;
-  margin: -20px 20px 0px 0px;
+  width: 100%;
+  margin: 20px 0 0;
+}
+
+.select_language select {
+  background: none;
+  border: none;
+  border-bottom: 3px solid #1abc9c;
+  color: #fff;
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.select_language select option {
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: #fff;
 }
