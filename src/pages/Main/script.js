@@ -99,7 +99,7 @@ function init() {
       let title = String(res);
       if (title.includes('|')) title = title.substring(0, title.indexOf('|'));
       if (title.includes('?')) title = title.substring(0, title.indexOf('?'));
-      
+
       loadInfoData(title);
       loadFactCheckData(title);
     });
